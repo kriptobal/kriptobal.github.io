@@ -1,17 +1,15 @@
-# 💀 NullSector — Blog técnico en Jekyll
-![Texto alternativo](assets/img/site/Man-at-the-Red-Bar.jpg)
-
+#  NullSector — Blog técnico en Jekyll
 **NullSector** es un blog personal construido con [Jekyll](https://jekyllrb.com/), enfocado en temas de seguridad informatica. El sitio está altamente personalizado para mantener una estética retro/underground mientras sirve como base de conocimiento y portafolio técnico.
 
 ---
 
-## 🚀 Cómo levantar el sitio localmente
+## Cómo levantar el sitio localmente
 
-### ✅ Requisitos (recomendados)
+### Requisitos (recomendados)
 
-- [Ruby](https://www.ruby-lang.org/) ~> 3.3.X (instalado previamente)
-- [Bundler](https://bundler.io/) (`gem install bundler`) ~> 2.6.X (instalado previamente)
-- [Jekyll](https://jekyllrb.com/) (`gem install jekyll`) ~> 7.3 (se instala automaticamente con las gemas)
+- [Ruby](https://www.ruby-lang.org/) ~> 3.4.X (instalado previamente)
+- [Bundler](https://bundler.io/) (`gem install bundler`) ~> 4.0.X (instalado previamente)
+- [Jekyll](https://jekyllrb.com/) (`gem install jekyll-theme-chirpy`) ~> 7.4 (se instala automaticamente con las gemas)
 
 ### 🔧 Instrucciones
 
@@ -57,8 +55,6 @@ Este sitio y su código fuente están bajo la Licencia MIT, lo que significa que
 Las licencias de las imagenes utilizadas copiadas de otro autor se listan a continuacion, las que he creado yo no la listo porque las libero al dominio publico con la licencia de contenido [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/). Si alguna imagen no sale y eres el autor y quieres que la baje contactame.
 
 ## Notas de desarrollo:
-
--Icono
 
 
 
