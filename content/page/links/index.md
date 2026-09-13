@@ -1,10 +1,11 @@
 ---
 title: Links
 links:
-  - title: GitHub
-    description: GitHub is the world's largest software development platform.
-    website: https://github.com
-    image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
+  - title: pwn.college
+    description: pwn.college is a modularized content site for learning different areas like rev, crypto, pwn, web, ... the structure is on the form of dojos and belts.
+    website: https://pwn.college/
+    image: /img/links/pwncollege.png
+
 menu:
     main: 
         weight: 4
@@ -14,20 +15,4 @@ menu:
 comments: false
 ---
 
-To use this feature, add `links` section to frontmatter.
-
-This page's frontmatter:
-
-```yaml
-links:
-  - title: GitHub
-    description: GitHub is the world's largest software development platform.
-    website: https://github.com
-    image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
-  - title: TypeScript
-    description: TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
-    website: https://www.typescriptlang.org
-    image: ts-logo-128.jpg
-```
-
-`image` field accepts both local and external images.
+Here are the links to different websites that I found really valuable to grow techically in differents areas of the cybersecurity (non-sponsored).
