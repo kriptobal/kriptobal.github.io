@@ -66,18 +66,25 @@ def main():
             # 1. Slice the true secret to get the suffix strictly after the target index
             true_suffix = SECRET[target_index + 1:]
             
-            # 2. Strict right-to-left dependency check
-            if guessed_suffix != true_suffix:
-                base_result = 0
+            # 2. Strict right-to-left dependency check and byte
+            # validation
+            if len(parts) > 2:
+                if guessed_suffix != true_suffix:
+                    base_result = 0
+                else:
+                    true_byte = SECRET[target_index]
+                    if guessed_hex_byte == true_byte:
+                        base_result = 1
+                    else:
+                        base_result = 0
             else:
-                # 3. If suffix matches, evaluate the targeted byte
                 true_byte = SECRET[target_index]
                 if guessed_hex_byte == true_byte:
                     base_result = 1
                 else:
                     base_result = 0
                     
-            # 4. Noise Injection: Bit-flip based on probability p
+            # 3. Noise Injection: Bit-flip based on probability p
             if random.random() < NOISE_P:
                 base_result = 1 - base_result
                 
@@ -102,3 +109,16 @@ if __name__ == "__main__":
 </figure>
 
 ## Bias measurement
+
+To determine the server's noise bias, we can approach the problem using two distinct methods. The first is a white-box approach: inspecting the server's source code, assuming it is available. The second, more versatile approach is empirical black-box analysis. By querying the endpoint with a set of test characters—knowing that random guesses will predominantly fail—we can analyze the resulting response distribution to accurately measure the channel's underlying noise parameters. Below is a bias measurement tool that tests three arbitrary bytes, leveraging a high volume of queries to maximize precision, as the primary objective is to estimate the noise floor rather than recover the plaintext. In this case, we will take the empirical approach by generating binomial distributions for three different hexadecimal characters—one correct ("5") and two incorrect ("1" and "a")—to visually compare and analyze their distributional differences.
+
+<figure style="text-align: center;">
+  <img src="/p/stats-and-opti-meet-crypto/bias-measurements.png" width="700" height="500">
+  <figcaption style="font-size: 0.9em; color: gray; margin-top: 5px;">
+    Figure 3: Bias measurement for 3 different last byte with 1000 experiments (N) and 1000 queries per experiment (k).
+  </figcaption>
+</figure>
+
+From the empirical distributions, we can conclude that the channel's bit-flip probability is approximately 60%, while correct, uncorrupted responses average a 40% response rate. This precise quantification of the noise floor is critical and will serve as the mathematical foundation for our statistical recovery algorithms.
+
+## Majority vote
