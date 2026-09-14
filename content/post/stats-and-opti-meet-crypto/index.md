@@ -17,7 +17,7 @@ weight: 1       # You can add weight to some posts to override the default sorti
 The padding oracle attack is a fundamental vulnerability affecting symmetric block ciphers. It occurs when an attacker possesses a ciphertext and has access to a decryption endpoint (the oracle) that reveals whether the decrypted payload has valid padding. In a real-world scenario, a threat actor intercepts a ciphertext transmitted between two servers, maliciously modifies it, and forwards it to the destination. By observing the server's responses—such as distinct error messages or log entries indicating a padding failure—the attacker can systematically decrypt the entire message byte-by-byte. 
 
 <figure style="text-align: center;">
-  <img src="/img/posts/stats-and-opti-meet-crypto/oracle-attack.gif" width="600" height="450">
+  <img src="/p/stats-and-opti-meet-crypto/oracle-attack.gif" width="600" height="450">
   <figcaption style="font-size: 0.9em; color: gray; margin-top: 5px;">
     Figure 1: Complete padding oracle attack.
   </figcaption>
@@ -95,7 +95,7 @@ if __name__ == "__main__":
 ```
 
 <figure style="text-align: center;">
-  <img src="/img/posts/stats-and-opti-meet-crypto/oracle-last-byte-tests.png" width="500" height="350">
+  <img src="/p/stats-and-opti-meet-crypto/oracle-last-byte-tests.png" width="500" height="350">
   <figcaption style="font-size: 0.9em; color: gray; margin-top: 5px;">
     Figure 2: Some guesses over the last byte "5".
   </figcaption>
