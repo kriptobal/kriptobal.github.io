@@ -1,5 +1,5 @@
 # Change baseurl before deploy
-baseurl = "https://kriptobal.github.io"
+baseurl = "https://kriptobal.github.io/"
 locale  = "en-us"
 title   = "Kriptobal's blog"
 
