@@ -4,7 +4,7 @@ links:
   - title: pwn.college
     description: pwn.college is a modularized content site for learning different areas like rev, crypto, pwn, web, ... the structure is on the form of dojos and belts.
     website: https://pwn.college/
-    image: /img/links/pwncollege.png
+    image: /links/pwncollege.png
 
 menu:
     main: 
