@@ -1,7 +1,7 @@
 ---
-title: Statistics and optimization meet cryptanalysis
-description: How three different algorithms successfully filter 60% probability bit-flip noise in a padding oracle attack scheme. The first two algorithms are rooted in statistics, while the third stems from optimization.
-slug: stats-and-opti-meet-crypto
+Title: Statistics Meet Cryptanalysis
+Description: Explore the use of Log-Likelihood Ratios (LLR) for filtering 60% probability bit-flip noise in a black-box padding oracle attack. This article breaks down the entire process with strong mathematical foundations and real-world connections.
+slug: stats-meet-crypto
 date: 2026-09-13 00:00:00+0000
 image: cover.png
 categories:
@@ -121,4 +121,4 @@ To determine the server's noise bias, we can approach the problem using two dist
 
 From the empirical distributions, we can conclude that the channel's bit-flip probability is approximately 60%, while correct, uncorrupted responses average a 40% response rate. This precise quantification of the noise floor is critical and will serve as the mathematical foundation for our statistical recovery algorithms.
 
-## Majority vote
+## Log Likelihood Ratio
