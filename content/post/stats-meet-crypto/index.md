@@ -17,7 +17,7 @@ weight: 1       # You can add weight to some posts to override the default sorti
 The padding oracle attack is a fundamental vulnerability affecting symmetric block ciphers. It occurs when an attacker possesses a ciphertext and has access to a decryption endpoint (the oracle) that reveals whether the decrypted payload has valid padding. In a real-world scenario, a threat actor intercepts a ciphertext transmitted between two servers, maliciously modifies it, and forwards it to the destination. By observing the server's responses—such as distinct error messages or log entries indicating a padding failure—the attacker can systematically decrypt the entire message byte-by-byte. 
 
 <figure style="text-align: center;">
-  <img src="/p/stats-and-opti-meet-crypto/oracle-attack.gif" width="600" height="450">
+  <img src="/p/stats-meet-crypto/oracle-attack.gif" width="600" height="450">
   <figcaption style="font-size: 0.9em; color: gray; margin-top: 5px;">
     Figure 1: Complete padding oracle attack.
   </figcaption>
@@ -102,7 +102,7 @@ if __name__ == "__main__":
 ```
 
 <figure style="text-align: center;">
-  <img src="/p/stats-and-opti-meet-crypto/oracle-last-byte-tests.png" width="500" height="350">
+  <img src="/p/stats-meet-crypto/oracle-last-byte-tests.png" width="500" height="350">
   <figcaption style="font-size: 0.9em; color: gray; margin-top: 5px;">
     Figure 2: Some guesses over the last byte "5".
   </figcaption>
@@ -113,7 +113,7 @@ if __name__ == "__main__":
 To determine the server's noise bias, we can approach the problem using two distinct methods. The first is a white-box approach: inspecting the server's source code, assuming it is available. The second, more versatile approach is empirical black-box analysis. By querying the endpoint with a set of test characters—knowing that random guesses will predominantly fail—we can analyze the resulting response distribution to accurately measure the channel's underlying noise parameters. Below is a bias measurement tool that tests three arbitrary bytes, leveraging a high volume of queries to maximize precision, as the primary objective is to estimate the noise floor rather than recover the plaintext. In this case, we will take the empirical approach by generating binomial distributions for three different hexadecimal characters—one correct ("5") and two incorrect ("1" and "a")—to visually compare and analyze their distributional differences.
 
 <figure style="text-align: center;">
-  <img src="/p/stats-and-opti-meet-crypto/bias-measurements.png" width="700" height="500">
+  <img src="/p/stats-meet-crypto/bias-measurements.png" width="700" height="500">
   <figcaption style="font-size: 0.9em; color: gray; margin-top: 5px;">
     Figure 3: Bias measurement for 3 different last byte with 1000 experiments (N) and 1000 queries per experiment (k).
   </figcaption>
