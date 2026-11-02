@@ -18,8 +18,8 @@ SortBy              = "default"
     lastUpdated = ":date_full"
 
 [sidebar]
-    emoji    = "🥀"
-    subtitle = "Here I share investigations into the fascinating connections between computer science and cybersecurity."
+    emoji    = ""
+    subtitle = "Poking at Things Until They Break"
     avatar   = "img/avatar.png"
 
 [article]
